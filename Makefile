@@ -17,9 +17,9 @@ fort: precompile $(PNAME)
 
 precompile : $(PRE)
 
-NODE_TEST = node_test.o
-sph_boost:	$(ALL_SPH_OBJS_BOOST) 
-	$(ICC) -I /usr/local/boost_1_55_0/  -o ~/Research/jvalue_project/node_stuff/jeans $(NODE_TEST) $(LIBS) $(CFLAGS)  \/usr/local/lib/libboost_program_options.a
+NODE_TEST_OBJ = AndrewsMathHdr.o GregsMathHdr.o node_test.o
+node_test:	$(NODE_TEST_OBJ) 
+	$(ICC) -I /usr/local/boost_1_55_0/  -o ~/Research/jvalue_project/node_stuff/test_exe $(NODE_TEST_OBJ) $(LIBS) $(CFLAGS)  \/usr/local/lib/libboost_program_options.a
 
 
 clean:

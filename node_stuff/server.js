@@ -30,7 +30,7 @@ function start(route){
 		}
 		else if (pathname === "/jeans")
 		{
-			var thing = require("./jean").execFile;
+			var thing = require("./jean");
 		}
 		response.writeHead(200, {"Content-Type": "text/plain"});
 		response.write("HELLO");

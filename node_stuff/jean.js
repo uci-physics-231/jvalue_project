@@ -9,6 +9,7 @@ var exec = require('child_process').execFile;
 
 var fun =function(){
    console.log("jeans running");
+   //./test_exe --help
    exec('./jeans', function(err, data) {  
         console.log(err)
         console.log(data.toString());                       
